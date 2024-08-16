@@ -15,5 +15,6 @@ return {
     },
     {
         "sainnhe/sonokai"
-    }
+    },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
 }
