@@ -11,7 +11,10 @@ local function pkg_path(name)
     return mason_registry.get_package(name):get_install_path()
 end
 
-local root_dir = require("jdtls.setup").find_root({ "gradlew", "mvnw", ".git", "pom.xml", "build.gradle" })
+local root_dir = require("jdtls.setup").find_root({
+    "gradlew", "mvnw", ".git", "pom.xml",
+    "build.gradle", "build.gradle.kts", "settings.gradle", "settings.gradle.kts",
+})
 if root_dir == "" then return end
 
 local project_name  = vim.fn.fnamemodify(root_dir, ":p:h:t")
